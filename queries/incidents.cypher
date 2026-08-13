@@ -1,0 +1,1 @@
+MATCH (l:Location {name:$location}) MATCH (s:Specialty {name:$specialty}) CREATE (i:Incident {id:$incident_id,type:$incident_type,severity:$severity,description:$description,status:'Active',created_at:datetime()}) CREATE (i)-[:OCCURS_AT]->(l) CREATE (i)-[:REQUIRES_SPECIALTY]->(s) RETURN i;
