@@ -2,6 +2,14 @@
 
 ResQGraph is a graph-backed web application that finds connected emergency resources for an incident: an available ambulance, a qualified responder and a suitable hospital. It uses CognoDB Cloud with the official Neo4j Python driver and openCypher over Bolt.
 
+## 🌐 Live Demo
+
+🚀 **Deployed Application:**  
+https://resqgraph.streamlit.app/
+
+💻 **GitHub Repository:**  
+https://github.com/Devika9511/ResQgraph
+
 ## Why a graph database?
 
 The important questions are about connections rather than isolated rows: how locations connect, how emergency stations connect responders, and how an incident connects to hospitals with the required specialty. Variable-length `CONNECTED_TO` traversals make these network queries natural. Relationship properties `distance_km` and `travel_time_min` allow route ranking.
